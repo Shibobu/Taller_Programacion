@@ -56,7 +56,7 @@ button:hover{
     cursor:pointer;
 }
 
-#Text_containers{
+.Text_containers{
     display: grid;
     grid-template-columns: repeat(2,2fr);
     align-items: center;

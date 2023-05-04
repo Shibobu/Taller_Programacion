@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="Ej1_Script.js">
+
         alert("Script, confirmation")
     </script>
     <title>Solicitar al usuario dos numeros y muestre por pantalla el resultado</title>
@@ -29,17 +30,23 @@
                         la división de ambos números
                     </p>  
                 </div>
-                <div onclick="ejercicio1()" class="button">
+                <div onclick="ejercicio1('Text_containers')" class="button">
                     <button>
                         Try it! 
                     </button>
                 </div>
-                <div id = Text_containers>
+                <div id = "Text_containers" class = "Text_containers 1">
                     <div><p><b>Ingrese el primer numero:</b></p></div>
-                    <div><textarea name="Text" class="Texts" cols="10" rows="1"></textarea></div>
+                    <div><input type="text" placeholder="Enter a number"></div>
                     <div><p><b>Ingrese el segundo numero:</b></p></div>
-                    <div><textarea name="Text" class="Texts" cols="10" rows="1"></textarea></div>
+                    <div><input type="text" placeholder="Enter a number"></div>
+                    <div><button onclick="resolve('Text_containers')">Resolve</button></div>
+                    <div><button onclick="hide('Text_containers')">Hide</button></div>
                 </div>
+                <script type="text/javascript",src="Ej1_Script.py">
+                    clear("Text_containers")
+                    hide("Text_containers")
+                </script>
             </div>
                 
         </div>
