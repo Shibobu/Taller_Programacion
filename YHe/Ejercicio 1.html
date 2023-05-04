@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <h1 class="rojo"> Titulo 1 por clases</h1>
+    <h2 class="rojo"> Titulo 2 por clases</h2>
+
+    <!--De esta forma puede afectar a varias etiquetas distintas, especificando a cuales
+    aparte que separa lo visual de la estructura-->
+
+    <style>
+        h1,h2{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <!--Afecta a todos los elementos h1, h2 funciona similar a clases, ya que facilita modificar
+    todo un tipo de etiqueta de una sola vez. Sin embargo si queremos modificar tendriamos que hacerlo
+    individualmente o cambiar a por clases.-->
+</head>
+
+<body>
+    <h1>Titulo por style en encabezado</h1>
+    <h2>Titulo 2 por style en encabezado</h2>
+
+    <h1 style="color: red; font-family: Arial, Helvetica, sans-serif;">
+        Titulo por style dentro de la etiqueta
+    </h1>
+    <h2 style="color: red; font-family: Arial, Helvetica, sans-serif;">
+        Titulo 2 por style dentro de la etiqueta
+    </h2>
+    <!--Modifica individualmente las etiquetas que marquemos, sin embargo no es conveniente cuando
+    se quiere seguir un estilo en toda la pagina-->
+</body>
+</html>
