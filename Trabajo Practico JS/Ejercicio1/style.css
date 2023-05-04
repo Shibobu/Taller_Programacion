@@ -1,0 +1,64 @@
+body{
+    background-color: gainsboro;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro{
+    line-height: medium;
+    font-size: 18px;
+}
+
+hgroup{
+    line-height: 10px;
+    font-size: 14px;
+}
+
+.wrapper {
+    display: grid;
+    gap: 10px;
+    grid-auto-columns: 500px;
+    
+}
+.Ejercicio{
+    display: grid;
+    grid-template-rows: 50px auto auto;
+    gap: 1em;
+}
+.Ejercicio , .Ejercicio > .Text{
+    border: solid darkcyan;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color: rgb(45, 201, 201);
+    color: black;
+    font-size: 18px;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.Ejercicio > .Text{
+    padding-left: 10px;
+    padding-bottom: 0;
+    text-align: justify;
+    background-color: darkcyan;
+}
+button{
+    font-size: 20px;
+    background-color: darkcyan;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 10px
+}
+
+button:hover{
+    background-color: rgb(4, 120, 120);;
+    cursor:pointer;
+}
+
+#Text_containers{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    padding: 0;
+}
