@@ -30,25 +30,45 @@
                         la división de ambos números
                     </p>  
                 </div>
-                <div onclick="ejercicio1('Text_containers')" class="button">
+                <div onclick="ejercicio('Ej1_Containers')" class="button">
                     <button>
                         Try it! 
                     </button>
                 </div>
-                <div id = "Text_containers" class = "Text_containers 1">
+                <div id = "Ej1_Containers" class = "Ej1_Containers 1">
                     <div><p><b>Ingrese el primer numero:</b></p></div>
-                    <div><input type="text" placeholder="Enter a number"></div>
+                    <div><input type="text" class = "InputText" placeholder="Enter a number"></div>
                     <div><p><b>Ingrese el segundo numero:</b></p></div>
-                    <div><input type="text" placeholder="Enter a number"></div>
-                    <div><button onclick="resolve('Text_containers')">Resolve</button></div>
-                    <div><button onclick="hide('Text_containers')">Hide</button></div>
+                    <div><input type="text" class = "InputText" placeholder="Enter a number"></div>
+                    <div><button onclick="resolver('Ej1_Containers')">Resolve</button></div>
+                    <div><button onclick="hide('Ej1_Containers')">Hide</button></div>
                 </div>
-                <script type="text/javascript",src="Ej1_Script.py">
-                    clear("Text_containers")
-                    hide("Text_containers")
-                </script>
             </div>
-                
+            <div class = "Ejercicio 2">
+                <h1>Ejercicio 2</h1>
+                <div class = "Text">
+                    <p>
+                        Crear un programa que solicite al usuario una cadena de texto y
+                        muestre en pantalla la misma cadena en minúsculas.
+                    </p>
+                </div>
+                <div onclick="ejercicio('Ej2_Containers')">
+                    <button>
+                        Try it!
+                    </button>
+                </div>
+                <div id = "Ej2_Containers" class = "Ej2_Containers 1">
+                    <div><button onclick="resolver('Ej2_Containers')">Resolve</button></div>
+                    <div><button onclick="hide('Ej2_Containers')">Hide</button></div>
+                </div>           
+            </div>
+
+            <script type="text/javascript",src="Ej1_Script.py">
+                clear("Ej1_Containers")
+                hide("Ej1_Containers")
+                clear("Ej2_Containers")
+                hide("Ej2_Containers")
+            </script>
         </div>
     </section>
 </body>

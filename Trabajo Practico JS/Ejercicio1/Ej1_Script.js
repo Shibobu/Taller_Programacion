@@ -1,12 +1,8 @@
-
-function ejercicio1(text){
+function ejercicio(text){
     show(text)
-    /*var n1 = Number(prompt("Ingrese el primer numero"));
-    var n2 = Number(prompt("Ingrese el segundo numero"))
-    */
 }
 
-function resolve(text){
+function resolver(text){
     var inputs = document.getElementById(text);
     var inp = inputs.getElementsByTagName("input");
     var n1 = Number(inp[0].value)
@@ -28,13 +24,9 @@ function resolve(text){
     clear(text)
 }
 
-function clear(text){
-    var inputs = document.getElementById(text);
-    var inp = inputs.getElementsByTagName("input");
-    inp[0].value = ""
-    inp[1].value = ""
+function conv_minusculas(text){
+    
 }
-
 function suma(n1,n2){
     return n1 + n2
 }
@@ -60,4 +52,13 @@ function hide(text){
 
 function show(text){
     document.getElementById(text).style.display = "grid";
+}
+
+function clear(text){
+    var inputs = document.getElementById(text);
+    var inp = inputs.getElementsByClassName("InputText");
+    if (inp.values != null){
+        inp[0].value = "";
+        inp[1].value = "";
+    }
 }
