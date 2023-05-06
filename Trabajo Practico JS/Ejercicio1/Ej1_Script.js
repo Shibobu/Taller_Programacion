@@ -2,8 +2,17 @@ function ejercicio(text){
     show(text)
 }
 
-function resolver(text){
+function clear(text){
+    alert("entro")
     var inputs = document.getElementById(text);
+    var inp = inputs.getElementsByClassName("InputText");
+    for (i in inp){
+        clear_values(inp[i])
+    }
+}
+
+function resolver(){
+    var inputs = document.getElementById("Ej1_Containers");
     var inp = inputs.getElementsByTagName("input");
     var n1 = Number(inp[0].value)
     var n2 = Number(inp[1].value)
@@ -21,11 +30,16 @@ function resolver(text){
     }
     else alert("Todo mal capo, ingresaste un 0 no se puede dividir por eso ")
 
-    clear(text)
+    clear("Ej1_Containers")
 }
 
 function conv_minusculas(text){
-    
+
+    var inp = document.getElementById("in_input");
+    var out = document.getElementById("out_input")
+
+    out.value = String(inp.value).toLowerCase();
+
 }
 function suma(n1,n2){
     return n1 + n2
@@ -54,11 +68,19 @@ function show(text){
     document.getElementById(text).style.display = "grid";
 }
 
-function clear(text){
-    var inputs = document.getElementById(text);
-    var inp = inputs.getElementsByClassName("InputText");
-    if (inp.values != null){
-        inp[0].value = "";
-        inp[1].value = "";
-    }
+function clear_values(item){
+    item.value = ""
+}
+function clear_all(){
+   var values  = document.getElementsByClassName("InputText")
+   for(i in values){
+        clear_values(values[i])
+   }
+}
+
+function hide_all(){
+    var values  = document.getElementsByClassName("Exercises")
+   for(i in values){
+        values[i].style.display = "none"
+   }
 }

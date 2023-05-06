@@ -57,7 +57,7 @@ button:hover{
     cursor:pointer;
 }
 
-.Ej1_Containers{
+.Exercises{
     display: grid;
     grid-template-columns: repeat(2,2fr);
     align-items: center;

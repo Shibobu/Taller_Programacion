@@ -35,12 +35,12 @@
                         Try it! 
                     </button>
                 </div>
-                <div id = "Ej1_Containers" class = "Ej1_Containers 1">
+                <div id = "Ej1_Containers" class = "Exercises">
                     <div><p><b>Ingrese el primer numero:</b></p></div>
                     <div><input type="text" class = "InputText" placeholder="Enter a number"></div>
                     <div><p><b>Ingrese el segundo numero:</b></p></div>
                     <div><input type="text" class = "InputText" placeholder="Enter a number"></div>
-                    <div><button onclick="resolver('Ej1_Containers')">Resolve</button></div>
+                    <div><button onclick="resolver()">Resolve</button></div>
                     <div><button onclick="hide('Ej1_Containers')">Hide</button></div>
                 </div>
             </div>
@@ -52,22 +52,25 @@
                         muestre en pantalla la misma cadena en minúsculas.
                     </p>
                 </div>
-                <div onclick="ejercicio('Ej2_Containers')">
+                <div onclick="ejercicio('Ej2_Containers')" class = "button">
                     <button>
                         Try it!
                     </button>
                 </div>
-                <div id = "Ej2_Containers" class = "Ej2_Containers 1">
-                    <div><button onclick="resolver('Ej2_Containers')">Resolve</button></div>
+                <div id = 'Ej2_Containers' class="Exercises">
+                    <div><p><b>Ingrese la cadena que va a ser convertida:</b></p></div>
+                    <div><input type="text" class="InputText" id = "in_input" placeholder="Enter a text"></div>
+                    <div><p><b>Minusculas:  </b></p></div>
+                    <div><input type="text" class="InputText" id = "out_input" disabled placeholder="Texto en minusculas"></div>
+                    <div><button onclick="conv_minusculas('Ej2_Containers')">Resolve</button></div>
                     <div><button onclick="hide('Ej2_Containers')">Hide</button></div>
+                    <div><button onclick="clear_all()"></button></div>
                 </div>           
             </div>
 
             <script type="text/javascript",src="Ej1_Script.py">
-                clear("Ej1_Containers")
-                hide("Ej1_Containers")
-                clear("Ej2_Containers")
-                hide("Ej2_Containers")
+                clear_all()
+                hide_all()
             </script>
         </div>
     </section>
