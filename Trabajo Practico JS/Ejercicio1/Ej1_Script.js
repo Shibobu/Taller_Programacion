@@ -1,21 +1,67 @@
 function ejercicio(text){
-    show(text)
+    show(text);
 }
-/*Ejercicio 3 */
-function exercise3(text){
-    aux = splitting(text)
-
-    for(i in aux){
-        alert(aux[i])
+/*Ejercicio 8*/
+function pow_tencia(){
+    
+}
+/*Ejercicio 7*/
+function reverse_string(){
+    var a = document.getElementById("Reverse_text").value
+    a= a.split("").reverse().join("")
+    document.getElementById("Reverse_text").value = a
+}
+/*Ejercicio 6*/
+function give_ranges(){
+    var a = Number(document.getElementById("rangeA").value);
+    var b = Number(document.getElementById("rangeB").value);
+    
+    if (a > b){
+        document.getElementById("WritingEj6").value = generatenumb(b,a)
+        return;
     }
+    document.getElementById("WritingEj6").value = generatenumb(a,b)
 }
-function splitting(text){
-   var textArea = document.getElementById("Text_areanames")
-   return textArea.value.split(',')
+
+function generatenumb(min,may){
+    txt ="Listado de numeros: \n"
+    for(i = min ; i<= may; i++){
+        txt += String(i)+ " ";
+    }
+    return txt;
+}
+/*Ejercicio 5*/
+function may_men(){
+    var aux = splitting("May_MenorArea").map(Number);
+   
+    document.getElementById("Mayor_Ej5").value = Math.max(...aux)
+    document.getElementById("Menor_Ej5").value = Math.min(...aux)
 }
 /*Ejercicio 4*/
-function exercise4(text){
+function promedio(text){
+    var aux = splitting("Text_numbers").map(Number);
+    var suma = 0;
+    var cant = 0;
     
+    for(i in aux){
+        if(!isNaN(aux[i])){
+            suma += aux[i];
+            cant ++;
+        }
+    }
+    document.getElementById("Promedio_response").value = suma/cant;
+}
+/*Ejercicio 3 */
+function exercise3(){
+    var aux = splitting("Text_areanames");
+
+    for(i in aux){
+        alert(aux[i]);
+    }
+}
+function splitting(text) {
+   var TXT_Area = document.getElementById(text);
+   return TXT_Area.value.split(',');
 }
 /* Ejercicio 2*/
 function conv_minusculas(text){
@@ -72,7 +118,7 @@ function div(n1,n2){
     return n1/n2
 }
 
-/*Ej */
+/*Navigation Conviniencies */
 function hide(text){
     clear_container(text)
     document.getElementById(text).style.display = "none";
@@ -106,5 +152,3 @@ function clear_container(text) {
         clear_values(cls[i])
     }
 }
-
-

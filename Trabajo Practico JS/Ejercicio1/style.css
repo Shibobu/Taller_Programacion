@@ -16,7 +16,7 @@ hgroup{
 .wrapper {
     display: grid;
     gap: 10px;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 35% 30% 35%;
     column-count: 3
     
 }
