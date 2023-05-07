@@ -3,7 +3,7 @@ function ejercicio(text){
 }
 /*Ejercicio 8*/
 function pow_tencia(){
-    
+
 }
 /*Ejercicio 7*/
 function reverse_string(){
@@ -79,11 +79,14 @@ function minusculas(text){
 
 /*Ejercicio 1*/
 function resolver(){
-    var inputs = document.getElementById("Ej1_Containers");
+    var inp = inputs("Ej1_Containers")
+    n1 = inp[0].value
+    n2 = inp[1].value
+    /*var inputs = document.getElementById("Ej1_Containers");
     var inp = inputs.getElementsByTagName("input");
     var n1 = Number(inp[0].value);
     var n2 = Number(inp[1].value);
-    /*var values = [];
+    var values = [];
     for(var i = 0; i < inp.length;i++){
         values.push(Number(inp[i].value));
     }*/
@@ -151,4 +154,11 @@ function clear_container(text) {
     for(i in cls){
         clear_values(cls[i])
     }
+}
+
+function inputs(text){
+    var inp =document.getElementById(text).getElementsByClassName("InputText");
+    
+    alert(a)
+    return a
 }
