@@ -2,16 +2,21 @@ function ejercicio(text){
     show(text)
 }
 /*Ejercicio 3 */
+function exercise3(text){
+    aux = splitting(text)
+
+    for(i in aux){
+        alert(aux[i])
+    }
+}
 function splitting(text){
    var textArea = document.getElementById("Text_areanames")
-   var aux = textArea.value.split(',')
-
-   for (i in aux){
-    alert(aux[i])
-   }
+   return textArea.value.split(',')
+}
+/*Ejercicio 4*/
+function exercise4(text){
     
 }
-
 /* Ejercicio 2*/
 function conv_minusculas(text){
 
