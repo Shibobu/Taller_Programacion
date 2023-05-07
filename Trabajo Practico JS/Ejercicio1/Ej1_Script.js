@@ -1,9 +1,26 @@
 function ejercicio(text){
     show(text);
 }
+/*Ejercicio 9 */
+function inter_tu(){
+    var aux = splitting("Search_cant",' ');
+    alert(aux);
+    var a = document.getElementById("text_busc").value;
+    var count = 0
+    for(i in aux){
+        if(a === aux[i]){
+            count ++
+        }
+    }
+    alert("Cantidad de repeticiones = " + count)
+    
+}
 /*Ejercicio 8*/
 function pow_tencia(){
-
+    var inp =in_greso("Ej8_Containers");
+    var n1 = Number(inp[0].value);
+    var n2 = Number(inp[1].value);
+    alert(Math.pow(n1,n2))
 }
 /*Ejercicio 7*/
 function reverse_string(){
@@ -32,14 +49,14 @@ function generatenumb(min,may){
 }
 /*Ejercicio 5*/
 function may_men(){
-    var aux = splitting("May_MenorArea").map(Number);
+    var aux = splitting("May_MenorArea",',').map(Number);
    
     document.getElementById("Mayor_Ej5").value = Math.max(...aux)
     document.getElementById("Menor_Ej5").value = Math.min(...aux)
 }
 /*Ejercicio 4*/
-function promedio(text){
-    var aux = splitting("Text_numbers").map(Number);
+function promedio(){
+    var aux = splitting("Text_numbers",',').map(Number);
     var suma = 0;
     var cant = 0;
     
@@ -53,15 +70,15 @@ function promedio(text){
 }
 /*Ejercicio 3 */
 function exercise3(){
-    var aux = splitting("Text_areanames");
+    var aux = splitting("Text_areanames",',');
 
     for(i in aux){
         alert(aux[i]);
     }
 }
-function splitting(text) {
+function splitting(text,simbol) {
    var TXT_Area = document.getElementById(text);
-   return TXT_Area.value.split(',');
+   return TXT_Area.value.split(simbol);
 }
 /* Ejercicio 2*/
 function conv_minusculas(text){
@@ -79,14 +96,13 @@ function minusculas(text){
 
 /*Ejercicio 1*/
 function resolver(){
-    var inp = inputs("Ej1_Containers")
-    n1 = inp[0].value
-    n2 = inp[1].value
-    /*var inputs = document.getElementById("Ej1_Containers");
-    var inp = inputs.getElementsByTagName("input");
+    
+   /* var inputs = document.getElementById("Ej1_Containers");
+    var inp = inputs.getElementsByTagName("input"); */
+    var inp = in_greso("Ej1_Containers");
     var n1 = Number(inp[0].value);
     var n2 = Number(inp[1].value);
-    var values = [];
+    /*var values = [];
     for(var i = 0; i < inp.length;i++){
         values.push(Number(inp[i].value));
     }*/
@@ -155,10 +171,7 @@ function clear_container(text) {
         clear_values(cls[i])
     }
 }
-
-function inputs(text){
-    var inp =document.getElementById(text).getElementsByClassName("InputText");
-    
-    alert(a)
-    return a
+function in_greso(text){
+    var inputs = document.getElementById(text);
+    return inputs.getElementsByTagName("input");
 }
