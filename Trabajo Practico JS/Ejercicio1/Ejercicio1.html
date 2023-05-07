@@ -35,7 +35,7 @@
                         Try it! 
                     </button>
                 </div>
-                <div id = "Ej1_Containers" class = "Exercises one">
+                <div id = "Ej1_Containers" class = "Exercises">
                     <div><p><b>Ingrese el primer numero:</b></p></div>
                     <div><input type="text" class = "InputText" placeholder="Enter a number"></div>
                     <div><p><b>Ingrese el segundo numero:</b></p></div>
@@ -58,14 +58,14 @@
                         Try it!
                     </button>
                 </div>
-                <div id = 'Ej2_Containers' class="Exercises two">
+                <div id = 'Ej2_Containers' class="Exercises">
                     <div><p><b>Ingrese la cadena que va a ser convertida:</b></p></div>
                     <div><input type="text" class="InputText" id = "in_input" placeholder="Enter a text"></div>
                     <div><p><b>Minusculas:  </b></p></div>
                     <div><input type="text" class="InputText" id = "out_input" disabled placeholder="Texto en minusculas"></div>
                     <div><button onclick="conv_minusculas('Ej2_Containers')">Resolve</button></div>
                     <div><button onclick="hide('Ej2_Containers')">Hide</button></div>
-                    <div><button onclick="clear_all()"></button></div>
+                    <div><button onclick="clear_container('Ej2_Containers')">Clear</button></div>
                 </div>           
             </div>
             
@@ -78,18 +78,18 @@
                         mostrando en pantalla el resultado.
                     </p>
                 </div>
-                <div onclick="ejercicio('Ej4_Containers')" class = "button">
+                <div onclick="ejercicio('Ej3_Containers')" class = "button">
                     <button>
                         Try it!
                     </button>
                 </div>
-                <div id = 'Ej4_Containers' class="Exercises three">
+                <div id = 'Ej3_Containers' class="Exercises">
                     <div><textarea name="Lista de nombres" id="Text_areanames" 
                         cols="50" rows="10" class="InputText" placeholder="Ingrese una serie de nombres separados por comas"></textarea>
                     </div>
-                    <div><button onclick="exercise4('Ej4_Containers')">Resolve</button></div>
-                    <div><button onclick="hide('Ej4_Containers')">Hide</button></div>
-                    <div><button onclick="clear_container('Ej4_Containers')">Clear</button></div>
+                    <div><button onclick="exercise3()">Resolve</button></div>
+                    <div><button onclick="hide('Ej3_Containers')">Hide</button></div>
+                    <div><button onclick="clear_container('Ej3_Containers')">Clear</button></div>
                 </div>           
             </div>
             <div class = "Ejercicio 4">
@@ -106,16 +106,114 @@
                         Try it!
                     </button>
                 </div>
-                <div id = 'Ej4_Containers' class="Exercises four">
+                <div id = 'Ej4_Containers' class="Exercises">
                     <div><textarea name="Lista de nombres" id="Text_numbers" 
-                        cols="50" rows="10" class="InputText" placeholder="Ingrese una serie de nombres separados por comas"></textarea>
+                        cols="50" rows="10" class="InputText" placeholder="Ingrese una serie de numerso separados por comas"></textarea>
                     </div>
-                    <div><button onclick="exercise4('Ej4_Containers')">Resolve</button></div>
+                    <div><button onclick="promedio()">Resolve</button></div>
+                    <div><p><b>Promedio:</b></p></div>
+                    <div><input type="text" id="Promedio_response" class="InputText" placeholder="Promedio" disabled></div>
                     <div><button onclick="hide('Ej4_Containers')">Hide</button></div>
                     <div><button onclick="clear_container('Ej4_Containers')">Clear</button></div>
                 </div>           
             </div>
-
+            <div class = "Ejercicio 5">
+                <h1>Ejercicio 5</h1>
+                <div class = "Text">
+                    <p>
+                        Crear un programa que solicite al usuario una lista de números
+                         separados por comas, los convierta en un array y muestre en pantalla
+                          el número más grande y el número más pequeño de dicha lista.
+                    </p>
+                </div>
+                <div onclick="ejercicio('Ej5_Containers')" class = "button">
+                    <button>
+                        Try it!
+                    </button>
+                </div>
+                <div id = 'Ej5_Containers' class="Exercises four">
+                    <div><textarea name="Lista de nombres" id="May_MenorArea" 
+                        cols="50" rows="10" class="InputText" placeholder="Ingrese una serie de numerso separados por comas"></textarea>
+                    </div>
+                    <div><button onclick="may_men()">Resolve</button></div>
+                    <div><p><b>Mayor:</b></p></div>
+                    <div><input type="text" id="Mayor_Ej5" class="InputText" placeholder="Mayor" disabled></div>
+                    <div><p><b>Menor:</b></p></div>
+                    <div><input type="text" id="Menor_Ej5" class="InputText" placeholder="Menor" disabled></div>
+                    <div><button onclick="hide('Ej5_Containers')">Hide</button></div>
+                    <div><button onclick="clear_container('Ej5_Containers')">Clear</button></div>
+                </div>           
+            </div>
+            <div class = "Ejercicio 6">
+                <h1>Ejercicio 6</h1>
+                <div class = "Text">
+                    <p>
+                        Crear un programa que solicite al usuario dos números y muestre en pantalla
+                        todos los números enteros comprendidos entre ambos números
+                        (incluyendo los números ingresados).
+                    </p>
+                </div>
+                <div onclick="ejercicio('Ej6_Containers')" class = "button">
+                    <button>
+                        Try it!
+                    </button>
+                </div>
+                <div id = 'Ej6_Containers' class="Exercises four">
+                    <div><p><b>Ingrese el primer numero del rango:</b></p></div>
+                    <div><input type="text" id="rangeA" class="InputText" placeholder="Rango A" ></div>
+                    <div><p><b>Ingrese el segundo numero del rango:</b></p></div>
+                    <div><input type="text" id="rangeB" class="InputText" placeholder="Rango B" ></div>
+                    <div><textarea name="Area" id="WritingEj6" cols="60" rows="15" disabled class="InputText"></textarea></div>
+                    <div><button onclick="give_ranges()">Resolve</button></div>
+                    <div><button onclick="hide('Ej6_Containers')">Hide</button></div>
+                    <div><button onclick="clear_container('Ej6_Containers')">Clear</button></div>
+                </div>           
+            </div>
+            <div class = "Ejercicio 7">
+                <h1>Ejercicio 7</h1>
+                <div class = "Text">
+                    <p>
+                        Crear un programa que solicite al usuario una cadena de texto
+                         y muestre en pantalla la misma cadena invertida
+                        (es decir, el último carácter de la cadena se muestra primero,
+                         el penúltimo carácter se muestra segundo, y así sucesivamente).
+                    </p>
+                </div>
+                <div onclick="ejercicio('Ej7_Containers')" class = "button">
+                    <button>
+                        Try it!
+                    </button>
+                </div>
+                <div id = 'Ej7_Containers' class="Exercises four">
+                    
+                    <div><textarea name="Reverse_text" id="Reverse_text" cols="55" rows="15" placeholder="Ingrese el texto a ser dado vuelta" class="InputText"></textarea></div>
+                    <div><button onclick="reverse_string()">Resolve</button></div>
+                    <div><button onclick="hide('Ej7_Containers')">Hide</button></div>
+                    <div><button onclick="clear_container('Ej7_Containers')">Clear</button></div>
+                </div>           
+            </div>
+            <div class = "Ejercicio 8">
+                <h1>Ejercicio 8</h1>
+                <div class = "Text">
+                    <p>
+                        Crear un programa que solicite al usuario dos números y
+                        muestre en pantalla el resultado de elevar el primer
+                        número a la potencia del segundo número.
+                    </p>
+                </div>
+                <div onclick="ejercicio('Ej8_Containers')" class = "button">
+                    <button>
+                        Try it!
+                    </button>
+                </div>
+                <div id = 'Ej8_Containers' class="Exercises four">
+                    
+                    <div><textarea name="Reverse_text" id="" cols="55" rows="15" placeholder="Ingrese el texto a ser dado vuelta" class="InputText"></textarea></div>
+                    <div><button onclick="">Resolve</button></div>
+                    <div><button onclick="hide('Ej7_Containers')">Hide</button></div>
+                    <div><button onclick="clear_container('Ej7_Containers')">Clear</button></div>
+                </div>           
+            </div>
             <script type="text/javascript",src="Ej1_Script.py">
                 clear_all()
                 hide_all()
