@@ -1,21 +1,37 @@
 function ejercicio(text){
     show(text)
 }
+/*Ejercicio 3 */
+function splitting(text){
+   var textArea = document.getElementById("Text_areanames")
+   var aux = textArea.value.split(',')
 
-function clear(text){
-    alert("entro")
-    var inputs = document.getElementById(text);
-    var inp = inputs.getElementsByClassName("InputText");
-    for (i in inp){
-        clear_values(inp[i])
-    }
+   for (i in aux){
+    alert(aux[i])
+   }
+    
 }
 
+/* Ejercicio 2*/
+function conv_minusculas(text){
+
+    var inp = document.getElementById("in_input");
+    var out = document.getElementById("out_input");
+
+    out.value = minusculas(inp.value)
+
+}
+
+function minusculas(text){
+    return text.toLowerCase()
+}
+
+/*Ejercicio 1*/
 function resolver(){
     var inputs = document.getElementById("Ej1_Containers");
     var inp = inputs.getElementsByTagName("input");
-    var n1 = Number(inp[0].value)
-    var n2 = Number(inp[1].value)
+    var n1 = Number(inp[0].value);
+    var n2 = Number(inp[1].value);
     /*var values = [];
     for(var i = 0; i < inp.length;i++){
         values.push(Number(inp[i].value));
@@ -29,18 +45,9 @@ function resolver(){
         alert("Division: " + res)
     }
     else alert("Todo mal capo, ingresaste un 0 no se puede dividir por eso ")
-
-    clear("Ej1_Containers")
+    clear_container("Ej1_Containers")
 }
 
-function conv_minusculas(text){
-
-    var inp = document.getElementById("in_input");
-    var out = document.getElementById("out_input")
-
-    out.value = String(inp.value).toLowerCase();
-
-}
 function suma(n1,n2){
     return n1 + n2
 }
@@ -60,7 +67,9 @@ function div(n1,n2){
     return n1/n2
 }
 
+/*Ej */
 function hide(text){
+    clear_container(text)
     document.getElementById(text).style.display = "none";
 }
 
@@ -84,3 +93,13 @@ function hide_all(){
         values[i].style.display = "none"
    }
 }
+
+function clear_container(text) {
+    var inputs = document.getElementById(text);
+    var cls = inputs.getElementsByClassName("InputText");
+    for(i in cls){
+        clear_values(cls[i])
+    }
+}
+
+
